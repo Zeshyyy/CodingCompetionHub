@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lambo Traders</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="Logo Refined.png">
+</head>
+<body>
+
+    <div class="background-iframe">
+        <iframe 
+            width="100%" 
+            height="100%" 
+            src="https://www.youtube.com/embed/fdS1ZQ7WJMk?autoplay=1&loop=1&playlist=fdS1ZQ7WJMk&controls=0&modestbranding=1&autoplay=1&mute=1" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" 
+            allowfullscreen>
+        </iframe>
+    </div>
+    
+    
+
+    <header>
+        <nav>
+            <img src="Logo Refined.png" class="logo" alt="logo">
+            <div class="menu">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="features.html">Features</a>
+                <a href="contact.html">Contact</a>
+            </div>
+
+            <div class="social">
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+        </nav>
+    </header>
+    
+    <div class="hero">
+        <img src="Lamboss.jpg" class="lamboss-img" alt="Lamboss Image">
+        <div class="text">
+            <h4>Powerful, Fun and</h4>
+            <h1>Fierce to <br> <span>Drive</span></h1>
+            <p>Real Poise, Real Power, Real Performance.</p>
+            <a href="book-test-drive.html" class="btn">book a test ride</a>
+            <a href="#" class="btn listen-btn">Listen to me</a>
+        </div>
+    </div>
+
+    <section id="video-section">
+        <div class="video-container">
+            <video autoplay muted loop class="vid-child">
+                <source src="vid1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <video autoplay muted loop class="vid-child">
+                <source src="vid2.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <video autoplay muted loop class="vid-child">
+                <source src="vid3.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="Logo Refined.png" class="footer-logo-img" alt="logo">
+            </div>
+            <div class="footer-menu">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Contact Us</a>
+            </div>
+            <div class="footer-social">
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Lambo Traders. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <audio id="lamboSound" src="lambo-rev.mp3"></audio>
+
+    <!-- Custom cursor -->
+    <div class="custom-cursor"></div>
+
+    <script>
+        const heroBg = document.querySelector('.hero');
+        const listenBtn = document.querySelector('.listen-btn');
+        const lamboSound = document.getElementById('lamboSound');
+        const placeholderImg = document.querySelector('.placeholder-img');
+        const lambossImg = document.querySelector('.lamboss-img');
+
+        listenBtn.addEventListener('click', () => {
+            lamboSound.play();
+            placeholderImg.style.opacity = 0; // Hide placeholder
+            lambossImg.style.opacity = 1; // Show Lamboss image
+            heroBg.style.backgroundImage = "url('Lambo SD.jpg')";
+            setTimeout(() => {
+                heroBg.style.backgroundImage = "url('Lambo Night.jpg')";
+            }, 5000);
+        });
+
+        let lastScrollTop = 0;
+        const header = document.querySelector('header');
+    
+        window.addEventListener('scroll', function() {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    
+            if (scrollTop > lastScrollTop) {
+                header.classList.add('hidden');
+            } else {
+                header.classList.remove('hidden');
+            }
+    
+            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+
+            // Text animation on scroll
+            const heroText = document.querySelector('.hero .text');
+            heroText.style.transform = `translateY(${scrollTop / 3}px)`;
+            heroText.style.opacity = 1 - scrollTop / 300;
+        });
+
+        // Custom cursor functionality
+        const customCursor = document.querySelector('.custom-cursor');
+
+        document.addEventListener('mousemove', (e) => {
+            customCursor.style.left = e.clientX + 'px';
+            customCursor.style.top = e.clientY + 'px';
+        });
+
+        document.addEventListener('mousedown', () => {
+            customCursor.classList.add('click');
+        });
+
+        document.addEventListener('mouseup', () => {
+            customCursor.classList.remove('click');
+        });
+    </script>
+</body>
+</html>

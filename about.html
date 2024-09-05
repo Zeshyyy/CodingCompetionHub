@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Lambo Traders</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="Logo Refined.png">
+    <style>
+        /* Font and General Reset */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #000;
+            color: #fff;
+            margin: 0;
+        }
+
+        /* Header Styling */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 15px 0;
+        }
+
+        header nav {
+            width: 90%;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header nav .logo {
+            width: 150px;
+        }
+
+        header nav .menu {
+            display: flex;
+            align-items: center;
+        }
+
+        nav .menu a {
+            color: #fff;
+            margin-left: 20px;
+            position: relative;
+            transition: color 0.4s ease;
+        }
+
+        nav .menu a:hover {
+            color: #dd0707;
+        }
+
+        /* Main Content */
+        main.about-main {
+            padding: 80px 20px; /* Space below the header */
+            text-align: center;
+        }
+
+        .about-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.1); /* Slight background to distinguish section */
+            border-radius: 10px;
+        }
+
+        .about-container h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .about-container p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #222;
+            color: #fff;
+            padding: 30px 0;
+            text-align: center;
+            margin-top: 40px; /* Space above footer */
+        }
+
+        footer .footer-content {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+
+        footer .footer-logo img {
+            width: 100px;
+        }
+
+        footer .footer-menu a {
+            color: #fff;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+
+        footer .footer-menu a:hover {
+            color: #dd0707;
+        }
+
+        footer .footer-social a {
+            color: #fff;
+            font-size: 24px;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+
+        footer .footer-social a:hover {
+            color: #dd0707;
+        }
+
+        footer .footer-bottom p {
+            margin: 0;
+            font-size: 14px;
+            color: #ddd;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <img src="Car website/Logo Refined.png" class="logo" alt="logo">
+            <div class="menu">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="features.html">Features</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="social">
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="about-main">
+        <div class="about-container">
+            <h1>About Us</h1>
+            <p>Welcome to Lambo Traders! We specialize in luxury and high-performance vehicles, offering a curated selection of the finest cars on the market. Our mission is to provide an unparalleled buying experience, combining exceptional service with a passion for the automotive industry.</p>
+            <p>At Lambo Traders, we pride ourselves on our expertise and dedication to customer satisfaction. Whether you're looking for the latest Lamborghini models or classic favorites, our team is here to help you find the perfect vehicle that meets your needs and desires.</p>
+            <p>Explore our range of vehicles and discover why Lambo Traders is the ultimate destination for luxury and performance enthusiasts.</p>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="Car website/Logo Refined.png" class="footer-logo-img" alt="logo">
+            </div>
+            <div class="footer-menu">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Contact Us</a>
+            </div>
+            <div class="footer-social">
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Lambo Traders. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book a Test Drive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="Logo Refined.png">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #000;
+            color: #fff;
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+        }
+        .form-container {
+            background-color: #222;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            width: 100%;
+            max-width: 500px;
+            text-align: center;
+        }
+        .form-container h1 {
+            margin-bottom: 20px;
+        }
+        .form-container input,
+        .form-container textarea {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: #333;
+            color: #fff;
+        }
+        .form-container button {
+            padding: 10px 20px;
+            background-color: #dd0707;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .form-container button:hover {
+            background-color: #b80606;
+        }
+        .form-container .message {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #dd0707;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Book a Test Drive</h1>
+        <form id="test-drive-form">
+            <input type="text" name="name" placeholder="Full Name" required>
+            <input type="email" name="email" placeholder="Email Address" required>
+            <input type="tel" name="phone" placeholder="Phone Number" required>
+            <textarea name="message" placeholder="Additional Details" rows="4"></textarea>
+            <button type="submit">Book Now</button>
+            <div class="message" id="form-message"></div>
+        </form>
+    </div>
+    <script>
+        document.getElementById('test-drive-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            // Simulate form submission and redirection
+            document.getElementById('form-message').textContent = 'Test Drive Booked! Redirecting to homepage...';
+
+            setTimeout(() => {
+                window.location.href = 'index.html'; // Redirect to homepage
+            }, 2000); // 2 seconds delay
+        });
+    </script>
+</body>
+</html>
